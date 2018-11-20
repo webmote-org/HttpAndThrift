@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="scm.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="scm.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="BenchmarkDotNet" Version="0.11.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\SCM.FrameworkNetCore\Quantum.FrameworkNetCore\Quantum.FrameworkNetCore.csproj" />
+    <ProjectReference Include="..\..\..\SCM.RpcProxy\SCM.RpcProxy.Audit\SCM.RpcProxy.Audit.csproj" />
+    <ProjectReference Include="..\..\..\SCM.RpcProxy\SCM.RpcProxy.Base\SCM.RpcProxy.Base.csproj" />
+    <ProjectReference Include="..\..\..\SCM.RpcProxy\SCM.RpcProxy.Common\SCM.RpcProxy.Common.csproj" />
+    <ProjectReference Include="..\SCM.Audit.Model\SCM.Audit.Model.csproj" />
+  </ItemGroup>
+
+</Project>
